@@ -1,3 +1,5 @@
+name: Run Veracode ISM
+
 on:
   workflow_dispatch:
 
@@ -6,5 +8,6 @@ jobs:
     name: Run ISM
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World"
-            
+      - run: |
+        docker run -it wasptree/veracode-ism --token 265750d1-d56e-42a1-b807-6e50b97d676b4f710c675a8f4c9086d7b0df4facd308.prod.mvsa.veracode.com --key 3cecd3da5d22a8394b01dbe70b886f39b4d2bdc0c8d3fa8db0d977c3419c635557c891618f685d906a4d5d95b0f092431cce67c7dbb
+dcc62c2aa88757532713f
