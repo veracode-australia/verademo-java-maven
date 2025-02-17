@@ -8,6 +8,7 @@ jobs:
     name: Run ISM
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
           echo "e282f3443373abbf3faa60f05b23b962e1ec1ec47636674663f235020705afb7884cf116a491e46834ad222671560b0e7560b5177d3e9131e6d0220ad8817386" > .mvsa_api_key
-          java -jar 
+          java -jar Veracode_ISM_Endpoint_TestJavaWrapper.jar
