@@ -8,9 +8,6 @@ jobs:
     name: Run ISM
     runs-on: ubuntu-latest
     steps:
-      - uses: addnab/docker-run-action@v3
-        with:
-          image: wasptree/veracode-ism
-          options: --token 4ba1e186-8547-4c51-9a1c-b34d798b584f03f51729b85d4dd58e0d424e4a52864f.prod.mvsa.veracode.com --key 3cecd3da5d22a8394b01dbe70b886f39b4d2bdc0c8d3fa8db0d977c3419c635557c891618f685d906a4d5d95b0f092431cce67c7dbbdcc62c2aa88757532713f
-          run: |
-            echo "Running Script"
+      - run: |
+          echo "e282f3443373abbf3faa60f05b23b962e1ec1ec47636674663f235020705afb7884cf116a491e46834ad222671560b0e7560b5177d3e9131e6d0220ad8817386" > .mvsa_api_key
+          java -jar 
